@@ -8,8 +8,9 @@
 </head>
 <body>
     <div class='theme'>
-        <div class="light-theme-icon"></div>
-        <div class="dark-theme-icon"></div>
+        <div class="theme-icon">
+            <img src="./img/moon-icon.jpg" alt="">
+        </div>
     </div>
     <div class='container'>
         <div class="form-container">
@@ -31,17 +32,28 @@
 </body>
 <script>
     const body = document.querySelector('body');
-    const lightThemeIcon = document.querySelector('.light-theme-icon');
-    const darkThemeIcon = document.querySelector('.dark-theme-icon');
+    const themeIcon = document.querySelector('.theme-icon');
     body.classList.add('light-theme');
     
-    lightThemeIcon.addEventListener('click', e => {
-        body.classList.remove('dark-theme');
-        body.classList.add('light-theme');
+    themeIcon.addEventListener('click', e => {
+        if (body.classList.contains('light-theme')) {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            themeIcon.firstElementChild.src = './img/sun-icon.jpg';
+        }
+        else {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            themeIcon.firstElementChild.src = './img/moon-icon.jpg';
+        }
     })
-    darkThemeIcon.addEventListener('click', e => {
-        body.classList.remove('light-theme')
-        body.classList.add('dark-theme');
-    })
+    // lightThemeIcon.addEventListener('click', e => {
+    //     body.classList.remove('dark-theme');
+    //     body.classList.add('light-theme');
+    // })
+    // darkThemeIcon.addEventListener('click', e => {
+    //     body.classList.remove('light-theme')
+    //     body.classList.add('dark-theme');
+    // })
 </script>
 </html>
