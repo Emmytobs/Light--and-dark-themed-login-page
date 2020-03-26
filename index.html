@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class='theme'>
+        <div class="light-theme-icon"></div>
+        <div class="dark-theme-icon"></div>
+    </div>
+    <div class='container'>
+        <div class="form-container">
+            <div class="blurb">
+                <p>Welcome Back, <br> Sign in</p>
+            </div>
+            <form>
+                <div>
+                    <label>Enter your username</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Enter your password</label>
+                    <input type="password">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    const body = document.querySelector('body');
+    const lightThemeIcon = document.querySelector('.light-theme-icon');
+    const darkThemeIcon = document.querySelector('.dark-theme-icon');
+    body.classList.add('light-theme');
+    
+    lightThemeIcon.addEventListener('click', e => {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+    })
+    darkThemeIcon.addEventListener('click', e => {
+        body.classList.remove('light-theme')
+        body.classList.add('dark-theme');
+    })
+</script>
+</html>

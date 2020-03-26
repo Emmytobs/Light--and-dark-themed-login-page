@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html, head, body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    --container-background: #f5f4f4;
+    --body-background: #fff;
+    padding: 150px 250px;
+    display: flex;
+    background: var(--body-background);
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    transition: all 0.6s ease-out;
+}
+
+/* Theme */
+.theme {
+    position: absolute;
+    top: 5vh;
+    right: 10vh;
+    width: 4.5em;
+    height: 1.6em;
+    display: flex;
+    flex-direction: row;
+}
+
+.light-theme-icon, .dark-theme-icon {
+    cursor: pointer;
+    width: 50%;
+    height: 100%
+}
+.light-theme-icon {
+    background: #c79696;
+}
+.dark-theme-icon {
+    background: #1b0404;
+}
+
+/* For the form */
+.container {
+    background: var(--container-background);
+    padding: 50px 70px;
+    margin-top: -50px;
+    transition: all 0.6s ease-in;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.blurb {
+    flex: 1;
+    padding: auto 50px;
+}
+
+.blurb p{
+    font-size: 1.8em;
+    color: var(--blurb-p-color);
+}
+
+form {
+    flex: 2;
+    justify-self: center;
+    align-self: center;
+    padding: auto 50px;
+}
+
+form div {
+    width: 100%;
+    height: 100%;
+    padding: 15px 12px;
+}
+
+form label {
+    font-size: 1.2em;
+    color: var(--form-label-color);
+}
+
+form input {
+    margin: 10px auto;
+    width: 100%;
+}
+
+form input[type='text'], form input[type='password'] {
+    padding: 6px 12px;
+    background: transparent;
+    border: 0;
+    border-bottom: var(--form-input-border-bottom) solid 3px;
+}
+
+/* For the light theme */
+.light-theme {
+    --container-background: #f5f4f4;
+    --body-background: #fff;
+    --form-input-border-bottom: #ccc;
+    --form-p-color: #000;
+    --form-label-color: #000;
+}
+
+.dark-theme {
+    --container-background: #464040;
+    --body-background: #353030;
+    --form-input-border-bottom: #ccc;
+    --blurb-p-color: #ccc;
+    --form-label-color: #ccc;
+}
