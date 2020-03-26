@@ -11,11 +11,11 @@ html, head, body {
 body {
     --container-background: #f5f4f4;
     --body-background: #fff;
-    padding: 150px 250px;
+    padding: 35px 70px;
     display: flex;
     background: var(--body-background);
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     transition: all 0.6s ease-out;
 }
@@ -44,8 +44,9 @@ body {
 .container {
     background: var(--container-background);
     padding: 50px 70px;
-    margin-top: -50px;
+    margin-top: -20vh;
     transition: all 0.6s ease-in;
+    width: 70%;
 }
 
 .form-container {
@@ -58,6 +59,7 @@ body {
 .blurb {
     flex: 1;
     padding: auto 50px;
+    text-align: left;
 }
 
 .blurb p{
@@ -94,6 +96,35 @@ form input[type='text'], form input[type='password'] {
     border: 0;
     border-bottom: var(--form-input-border-bottom) solid 3px;
 }
+
+/*
+**************
+For the smaller screen sizes 
+**************
+*/
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 20px;
+    }
+
+    .container {
+        padding: 35px 15px;
+        margin: 0;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .blurb {
+        padding: 20px auto;
+        text-align: center;
+    }
+}
+
 
 /* For the light theme */
 .light-theme {
